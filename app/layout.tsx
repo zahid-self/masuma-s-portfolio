@@ -6,7 +6,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 export const metadata: Metadata = {
   title: "Masuma Aktar — Digital Marketer",
   description:
-    "Portfolio of Masuma Aktar, a passionate digital marketer specialising in SEO, paid ads, social media, content, and analytics. Open to work.",
+    "Portfolio of Masuma Aktar, a results-driven digital marketer specialising in Facebook Ads, Google Ads, SEO, Landing Pages, and Conversion Tracking. Open to freelance and remote work.",
 };
 
 export default function RootLayout({

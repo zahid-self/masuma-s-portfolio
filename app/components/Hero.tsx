@@ -1,18 +1,20 @@
 "use client";
 
+import Image from "next/image";
+
 const stats = [
-  { num: "12+", label: "Projects Completed" },
-  { num: "5+", label: "Certifications" },
-  { num: "3×", label: "Avg. ROAS Achieved" },
+  { num: "2+", label: "Years Experience" },
+  { num: "4+", label: "Core Specializations" },
+  { num: "100%", label: "Result Focused" },
 ];
 
 const heroTags = [
-  { label: "SEO", variant: "warm" },
-  { label: "Paid Ads", variant: "default" },
-  { label: "Content", variant: "yellow" },
-  { label: "Analytics", variant: "default" },
-  { label: "Social Media", variant: "warm" },
-  { label: "Email", variant: "default" },
+  { label: "Facebook Ads", variant: "warm" },
+  { label: "Google Ads", variant: "default" },
+  { label: "SEO", variant: "yellow" },
+  { label: "Landing Pages", variant: "default" },
+  { label: "Meta Pixel", variant: "warm" },
+  { label: "Social Media", variant: "default" },
 ] as const;
 
 type TagVariant = "warm" | "yellow" | "default";
@@ -51,7 +53,6 @@ export default function Hero() {
       >
         {/* Left content */}
         <div style={{ flex: 1, minWidth: "280px" }}>
-          {/* Badge */}
           <div
             className="animate-fade-up"
             style={{
@@ -70,19 +71,10 @@ export default function Hero() {
               marginBottom: "2rem",
             }}
           >
-            <span
-              style={{
-                width: "6px",
-                height: "6px",
-                borderRadius: "50%",
-                background: "var(--accent)",
-                animation: "pulse 2s infinite",
-              }}
-            />
+            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--accent)", animation: "pulse 2s infinite" }} />
             Available for hire
           </div>
 
-          {/* Title */}
           <h1
             className="animate-fade-up-1"
             style={{
@@ -93,260 +85,73 @@ export default function Hero() {
               marginBottom: "1.5rem",
             }}
           >
-            I turn{" "}
-            <em
-              className="gradient-text"
-              style={{ fontStyle: "italic" }}
-            >
-              clicks
-            </em>
+            I grow brands
             <br />
-            into{" "}
-            <em
-              className="gradient-text"
-              style={{ fontStyle: "italic" }}
-            >
-              customers.
-            </em>
+            with <em className="gradient-text" style={{ fontStyle: "italic" }}>data-driven</em>
+            <br />
+            <em className="gradient-text" style={{ fontStyle: "italic" }}>marketing.</em>
           </h1>
 
-          {/* Description */}
           <p
             className="animate-fade-up-2"
-            style={{
-              fontSize: "1.1rem",
-              color: "var(--text2)",
-              maxWidth: "540px",
-              lineHeight: 1.75,
-              marginBottom: "3rem",
-              fontWeight: 300,
-            }}
+            style={{ fontSize: "1.1rem", color: "var(--text2)", maxWidth: "540px", lineHeight: 1.75, marginBottom: "3rem", fontWeight: 300 }}
           >
-            I&apos;m{" "}
-            <strong style={{ color: "var(--text)", fontWeight: 600 }}>
-              Masuma Aktar
-            </strong>{" "}
-            — a passionate digital marketer freshly equipped with the skills to
-            grow brands, drive engagement, and make data do the heavy lifting.
-            Ready to bring big energy to my first role.
+            I&apos;m <strong style={{ color: "var(--text)", fontWeight: 600 }}>Masuma Aktar</strong> — a results-driven digital marketer with 2+ years of experience in Facebook Ads, Google Ads, SEO, and landing page design. I help businesses attract targeted audiences and increase sales.
           </p>
 
-          {/* CTA buttons */}
-          <div
-            className="animate-fade-up-3"
-            style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}
-          >
-            <a
-              href="#contact"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                background: "var(--grad)",
-                color: "#fff",
-                padding: "0.9rem 2rem",
-                borderRadius: "50px",
-                textDecoration: "none",
-                fontWeight: 600,
-                fontSize: "0.95rem",
-                boxShadow: "0 8px 32px rgba(255,107,107,0.35)",
-                transition: "transform 0.2s, box-shadow 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow =
-                  "0 12px 40px rgba(255,107,107,0.5)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow =
-                  "0 8px 32px rgba(255,107,107,0.35)";
-              }}
-            >
-              ✉ Let&apos;s Work Together
-            </a>
-            <a
-              href="#projects"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                background: "transparent",
-                border: "1px solid var(--border)",
-                color: "var(--text)",
-                padding: "0.9rem 2rem",
-                borderRadius: "50px",
-                textDecoration: "none",
-                fontWeight: 500,
-                fontSize: "0.95rem",
-                transition: "border-color 0.2s, background 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "var(--text2)";
-                e.currentTarget.style.background = "var(--surface)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "var(--border)";
-                e.currentTarget.style.background = "transparent";
-              }}
-            >
-              See My Work →
-            </a>
+          <div className="animate-fade-up-3" style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+            <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "var(--grad)", color: "#fff", padding: "0.9rem 2rem", borderRadius: "50px", textDecoration: "none", fontWeight: 600, fontSize: "0.95rem", boxShadow: "0 8px 32px rgba(255,107,107,0.35)", transition: "transform 0.2s, box-shadow 0.2s" }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 12px 40px rgba(255,107,107,0.5)"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 8px 32px rgba(255,107,107,0.35)"; }}
+            >✉ Let&apos;s Work Together</a>
+            <a href="#projects" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", border: "1px solid var(--border)", color: "var(--text)", padding: "0.9rem 2rem", borderRadius: "50px", textDecoration: "none", fontWeight: 500, fontSize: "0.95rem", transition: "border-color 0.2s, background 0.2s" }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--text2)"; e.currentTarget.style.background = "var(--surface)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.background = "transparent"; }}
+            >See My Work →</a>
           </div>
 
-          {/* Stats */}
-          <div
-            className="animate-fade-up-4"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "2.5rem",
-              marginTop: "4rem",
-            }}
-          >
-            {stats.map((s) => (
+          <div className="animate-fade-up-4" style={{ display: "flex", flexWrap: "wrap", gap: "2.5rem", marginTop: "4rem" }}>
+            {stats.map(s => (
               <div key={s.label}>
-                <div
-                  className="gradient-text"
-                  style={{
-                    fontFamily: "'DM Serif Display', serif",
-                    fontSize: "2.2rem",
-                    lineHeight: 1,
-                  }}
-                >
-                  {s.num}
-                </div>
-                <div
-                  style={{
-                    color: "var(--text3)",
-                    fontSize: "0.8rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.08em",
-                    marginTop: "0.3rem",
-                  }}
-                >
-                  {s.label}
-                </div>
+                <div className="gradient-text" style={{ fontFamily: "'DM Serif Display', serif", fontSize: "2.2rem", lineHeight: 1 }}>{s.num}</div>
+                <div style={{ color: "var(--text3)", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.08em", marginTop: "0.3rem" }}>{s.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Hero card */}
-        <div
-          className="animate-fade-up-2"
-          style={{
-            flex: "0 0 auto",
-            width: "min(320px, 100%)",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              background: "var(--card-bg)",
-              backdropFilter: "blur(20px)",
-              border: "1px solid var(--border)",
-              borderRadius: "24px",
-              padding: "2rem",
-              width: "100%",
-              boxShadow: "var(--shadow)",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
+        <div className="animate-fade-up-2" style={{ flex: "0 0 auto", width: "min(340px, 100%)", display: "flex", justifyContent: "center" }}>
+          <div style={{ background: "var(--card-bg)", backdropFilter: "blur(20px)", border: "1px solid var(--border)", borderRadius: "24px", width: "100%", boxShadow: "var(--shadow)", position: "relative", overflow: "hidden" }}>
             {/* Top gradient bar */}
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                height: "2px",
-                background: "var(--grad)",
-              }}
-            />
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "var(--grad)", zIndex: 2 }} />
 
-            {/* Avatar */}
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "50%",
-                background: "var(--grad)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "2rem",
-                marginBottom: "1rem",
-                fontFamily: "'DM Serif Display', serif",
-                color: "white",
-              }}
-            >
-              AN
+            {/* Large photo */}
+            <div style={{ position: "relative", width: "100%", height: "320px", overflow: "hidden" }}>
+              <Image
+                src="/masuma.jpg"
+                alt="Masuma Aktar"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center top" }}
+              />
+              {/* Gradient fade at bottom */}
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "120px", background: "linear-gradient(to top, var(--bg2), transparent)" }} />
+              {/* Open badge overlaid on photo */}
+              <div style={{ position: "absolute", bottom: "1rem", left: "1rem", display: "flex", alignItems: "center", gap: "0.6rem", background: "rgba(0,0,0,0.55)", backdropFilter: "blur(10px)", border: "1px solid rgba(107,255,157,0.35)", borderRadius: "50px", padding: "0.45rem 1rem", fontSize: "0.8rem", fontWeight: 500, color: "#6bff9d" }}>
+                <span style={{ animation: "pulse 2s infinite" }}>●</span>
+                Open to opportunities
+              </div>
             </div>
 
-            <div
-              style={{
-                fontFamily: "'DM Serif Display', serif",
-                fontSize: "1.4rem",
-                marginBottom: "0.3rem",
-              }}
-            >
-              Masuma Aktar
-            </div>
-            <div
-              style={{
-                color: "var(--text2)",
-                fontSize: "0.9rem",
-                marginBottom: "1.5rem",
-              }}
-            >
-              Digital Marketing Specialist
-            </div>
-
-            {/* Tags */}
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "0.5rem",
-                marginBottom: "1.5rem",
-              }}
-            >
-              {heroTags.map((t) => (
-                <span
-                  key={t.label}
-                  style={{
-                    ...tagStyles[t.variant],
-                    fontSize: "0.75rem",
-                    padding: "0.3rem 0.8rem",
-                    borderRadius: "50px",
-                    fontWeight: 500,
-                  }}
-                >
-                  {t.label}
-                </span>
-              ))}
-            </div>
-
-            {/* Open badge */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.6rem",
-                background: "rgba(107,255,157,0.1)",
-                border: "1px solid rgba(107,255,157,0.25)",
-                borderRadius: "12px",
-                padding: "0.8rem 1rem",
-                fontSize: "0.85rem",
-                fontWeight: 500,
-                color: "#6bff9d",
-              }}
-            >
-              <span style={{ animation: "pulse 2s infinite" }}>●</span>
-              Open to opportunities
+            {/* Card body */}
+            <div style={{ padding: "1.5rem 2rem 2rem" }}>
+              <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: "1.4rem", marginBottom: "0.2rem" }}>Masuma Aktar</div>
+              <div style={{ color: "var(--text2)", fontSize: "0.9rem", marginBottom: "1.2rem" }}>Digital Marketing Specialist</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+                {heroTags.map(t => (
+                  <span key={t.label} style={{ ...tagStyles[t.variant], fontSize: "0.75rem", padding: "0.3rem 0.8rem", borderRadius: "50px", fontWeight: 500 }}>{t.label}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
